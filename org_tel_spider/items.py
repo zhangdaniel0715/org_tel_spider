@@ -13,5 +13,4 @@ class OrgTelSpiderItem(scrapy.Item):
     # name = scrapy.Field()
     name = scrapy.Field()
     link = scrapy.Field()
-    desc = scrapy.Field()
-    content = scrapy.Field()
+    tel_num = scrapy.Field()
