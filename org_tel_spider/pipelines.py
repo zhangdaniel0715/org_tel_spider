@@ -14,8 +14,7 @@ class OrgTelSpiderPipeline(object):
 
     def process_item(self, item, spider):
         line = json.dumps(dict(item)) + '\n'
-        #self.file.write(line.decode('unicode_escape'))
-        self.file.write(line)
+        self.file.write(line.encode('utf-8').decode('unicode_escape'))
         return item
 
     def close_spider(self, spider):
